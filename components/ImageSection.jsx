@@ -13,7 +13,7 @@ const ImageSection = () => {
   return (
     
     <View style={{alignItems:'center', borderBottomWidth:3, borderBottomColor:'#F7F8FA', paddingBottom:5 }}>
-      <Image  style={{width:'375px', height:'450px'}} source={require('../assets/img1.jpg')} />
+      <Image  style={{width:'100%', height:'450px'}} source={require('../assets/img1.jpg')} />
 
       <View style={{flexDirection:'row', marginRight:'auto'}}>
         <IconButton

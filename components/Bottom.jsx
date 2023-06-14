@@ -3,11 +3,13 @@ import { Text, View } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import { IconButton } from 'react-native-paper';
 
+import Icon from 'react-native-vector-icons/AntDesign';
+
 const Bottom = () => {
   return (
-    <View style={{padding:15}}>
+    <View style={{padding:15, borderBottomWidth:3, borderBottomColor:'#F7F8FA', paddingBottom:5}}>
     
-   <View style={{ flex:1, flexDirection:'row'}}>
+   <View style={{ flex:1, flexDirection:'row', }}>
         <Avatar.Image size={40} source={require('../assets/img.png')} style={{backgroundColor:'#FFDCA9'}} />
             <View style={{alignSelf:'center'}}>
                 <Text style={{fontSize:15, lineHeight:15, fontWeight:'bold',paddingLeft:10}}>안녕 나 응애 </Text>
@@ -31,10 +33,57 @@ const Bottom = () => {
             괜찮았어요! 오늘 중으로 라이브 리뷰 올라온다고 하니
             꼭 봐주세용~!
         </Text>
-   </View>
+        <View style={{flexDirection:'row', marginRight:'auto'}}>
+            <IconButton
+                icon="heart-outline"
+                size={25}
+                style={{margin:0}}
+            />
+            <Text style={{color:'#919EB6' , paddingTop:15, fontSize:'12px' }}>5</Text>
 
-   
-   
+            <Icon.Button
+                name="message1"
+                backgroundColor={'none'}
+                color={'#AFB9CA'}
+                style={{paddingTop:10, paddingRight:0, marginRight:0}}
+                />
+                
+            <Text style={{color:'#919EB6' , paddingTop:15, fontSize:'12px' }}>5</Text>
+        </View>
+
+        <View style={{ flex:1, flexDirection:'row', paddingTop:10}}>
+            <Avatar.Image size={40} source={require('../assets/img.png')} style={{backgroundColor:'#FFDCA9'}} />
+                <View style={{alignSelf:'center'}}>
+                    <Text style={{fontSize:15, lineHeight:15, fontWeight:'bold',paddingLeft:10}}>ㅇㅅㅇ </Text>
+                </View>
+                <View style={{paddingTop:5, flex:1, flexDirection:'row',alignSelf:'center' }}>
+                    <Avatar.Icon size={20} icon="check" color='white' style={{backgroundColor:'#01B99F' }} />
+                    <Text style={{paddingLeft:2, color:'gray'}}>1일전</Text>
+                </View>
+                <View >
+                <IconButton
+                        icon="dots-horizontal"
+                        size={25}
+                        style={{margin:0}}
+                    />
+                </View>
+        </View>
+        <View style={{paddingLeft:50}}>
+            <Text style={{color:'#313B49'}}>오 대박! 라이브 리뷰 오늘 올라온대요? 챙겨봐야겠다
+            </Text>
+            <View style={{flexDirection:'row', marginRight:'auto'}}>
+                <IconButton
+                    icon="heart-outline"
+                    size={25}
+                    style={{margin:0}}
+                />
+                <Text style={{color:'#919EB6' , paddingTop:15, fontSize:'12px' }}>5</Text>
+
+                
+            </View>
+        </View>
+
+   </View>
 </View>
     )
 }
